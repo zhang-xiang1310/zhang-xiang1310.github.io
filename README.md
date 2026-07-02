@@ -31,3 +31,9 @@ SESSION_SECRET=replace-with-a-long-random-secret
 
 Uploads use local files during development.
 In Vercel production, connect the Blob store to the project; Vercel will inject the Blob store settings automatically.
+
+Vercel settings should use:
+
+- Framework Preset: `Other`
+- Build Command: empty
+- Output Directory: `.`
