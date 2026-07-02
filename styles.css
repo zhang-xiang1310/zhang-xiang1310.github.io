@@ -208,6 +208,14 @@ img {
   color: rgba(246, 244, 236, 0.76);
 }
 
+.heroLead {
+  width: min(620px, 100%);
+  margin: 0;
+  color: rgba(246, 244, 236, 0.76);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
 .heroGrid {
   display: grid;
   width: min(620px, 100%);
@@ -319,6 +327,34 @@ img {
   margin: 0;
   font-size: 3.25rem;
   line-height: 1;
+}
+
+.introCopy p,
+.contactCopy p,
+.workMeta p {
+  margin: 0;
+  color: rgba(18, 19, 15, 0.72);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.workSection .workMeta p {
+  color: rgba(246, 244, 236, 0.68);
+}
+
+.placeholderList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.placeholderList span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: rgba(18, 19, 15, 0.68);
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
 .skeletonCopy {

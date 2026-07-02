@@ -1,4 +1,12 @@
-const uploadSlots = ["hero", "portrait", "mark", "work-one", "work-two", "work-three"];
+const uploadSlots = [
+  "hero",
+  "portrait",
+  "mark",
+  "work-one",
+  "work-two",
+  "work-three"
+];
+
 const fallbackImages = {
   hero: "/assets/hero-bg.png",
   portrait: "/assets/portrait-placeholder.png",
@@ -41,8 +49,8 @@ function setNotice(message) {
   toast.textContent = message;
   setHidden(toast, false);
 
-  window.clearTimeout(setNotice._timer);
-  setNotice._timer = window.setTimeout(() => {
+  window.clearTimeout(setNotice.timer);
+  setNotice.timer = window.setTimeout(() => {
     setHidden(toast, true);
     toast.textContent = "";
   }, 2400);
@@ -50,8 +58,8 @@ function setNotice(message) {
 
 function updateHeader() {
   el.stateLabel.textContent = state.authenticated
-    ? "ADMIN PORTFOLIO / 2026"
-    : "PRIVATE PORTFOLIO / 2026";
+    ? "编辑模式 / 已登录"
+    : "私人展示 / 未登录";
   el.authLabel.textContent = state.authenticated ? "退出" : "登录";
   el.authButton.setAttribute(
     "aria-label",
