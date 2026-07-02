@@ -27,7 +27,7 @@ Default admin account:
 SITE_ADMIN_EMAIL=1403608175@qq.com
 SITE_ADMIN_PASSWORD=zhangxiang1310
 SESSION_SECRET=replace-with-a-long-random-secret
-BLOB_READ_WRITE_TOKEN=your-vercel-blob-read-write-token
 ```
 
-Uploads use local files during development and Vercel Blob in production.
+Uploads use local files during development.
+In Vercel production, connect the Blob store to the project; Vercel will inject the Blob store settings automatically.
