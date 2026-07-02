@@ -1,0 +1,12 @@
+{
+  "name": "personal-intro-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.5.0"
+  }
+}
