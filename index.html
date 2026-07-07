@@ -38,13 +38,18 @@
     <main id="top">
       <section class="heroSection" aria-labelledby="hero-title">
         <button
-          class="heroMedia uploadZone"
+          class="heroMedia"
           id="slot-hero"
           type="button"
           data-slot="hero"
           aria-label="封面图片"
           disabled
         >
+          <canvas
+            id="galaxyHero"
+            class="galaxyHeroCanvas"
+            aria-hidden="true"
+          ></canvas>
           <img
             id="image-hero"
             src="/assets/hero-bg.png"

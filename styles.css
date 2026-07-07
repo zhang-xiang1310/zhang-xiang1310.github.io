@@ -150,11 +150,21 @@ img {
   padding: 0;
   border: 0;
   background: transparent;
+  overflow: hidden;
+}
+
+.galaxyHeroCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.heroMedia img,
+.heroMedia .uploadOverlay {
+  display: none;
 }
 
 .heroMedia img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   transform: scale(1.01);
 }
