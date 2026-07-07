@@ -3,336 +3,323 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#10110f" />
-    <title>张响的个人介绍网站</title>
-    <meta
-      name="description"
-      content="张响的个人介绍网站，支持登录后上传封面、肖像和作品图片。"
-    />
+    <meta name="theme-color" content="#010105" />
+    <title>张响的个人网站</title>
+    <meta name="description" content="张响的个人网站首页。" />
+    <link rel="icon" type="image/png" href="/appicon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="siteHeader">
-      <a class="brandMark" href="#top" aria-label="回到顶部">ZX</a>
-      <nav class="mainNav" aria-label="页面导航">
-        <a href="#top">首页</a>
-        <a href="#intro">简介</a>
-        <a href="#work">作品</a>
-        <a href="#contact">联系</a>
-      </nav>
-      <button class="authButton" id="authButton" type="button" aria-label="登录">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M15 3a3 3 0 0 1 3 3v2h-2V6a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-2h2v2a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h7Z"
-            fill="currentColor"
-          />
-          <path
-            d="M13.7 8.3 17.4 12l-3.7 3.7-1.4-1.4 1.3-1.3H6v-2h7.6l-1.3-1.3 1.4-1.4Z"
-            fill="currentColor"
-          />
-        </svg>
-        <span id="authLabel">登录</span>
-      </button>
-    </header>
-
     <main id="top">
-      <section class="heroSection" aria-labelledby="hero-title">
-        <button
-          class="heroMedia"
-          id="slot-hero"
-          type="button"
-          data-slot="hero"
-          aria-label="封面图片"
-          disabled
-        >
-          <canvas
-            id="galaxyHero"
-            class="galaxyHeroCanvas"
-            aria-hidden="true"
-          ></canvas>
-          <img
-            id="image-hero"
-            src="/assets/hero-bg.png"
-            alt="封面图片"
-            draggable="false"
-          />
-          <span class="uploadOverlay hidden" data-overlay>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span data-overlay-text>上传图片</span>
-          </span>
-        </button>
-        <div class="heroVeil" aria-hidden="true"></div>
-        <div class="heroContent">
-          <p class="eyebrow" id="stateLabel">私人展示 / 未登录</p>
-          <h1 id="hero-title">
-            <span>张响</span>
-            <span>个人介绍网站</span>
-          </h1>
-          <p class="heroLead">
-            这里预留你的第一段自我介绍。后续可以补充职业方向、个人标签、代表经历和联系方式。
-          </p>
-          <div class="heroGrid" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+      <section class="heroSection" aria-label="动态星系首页">
+        <canvas id="galaxyHero" class="galaxyHeroCanvas" aria-hidden="true"></canvas>
+        <div class="heroTitle" aria-label="个人介绍 张响">
+          <h1>个人介绍</h1>
+          <p>张响</p>
+        </div>
+        <div class="planetLegend" aria-label="行星说明">
+          <div><span class="planetIcon planetIconViolet" aria-hidden="true"></span><strong>个人介绍</strong></div>
+          <div><span class="planetIcon planetIconIce" aria-hidden="true"></span><strong>掌握技能</strong></div>
+          <div><span class="planetIcon planetIconRing" aria-hidden="true"></span><strong>工作经历</strong></div>
+          <div><span class="planetIcon planetIconGiant" aria-hidden="true"></span><strong>项目经历</strong></div>
+          <div><span class="planetIcon planetIconRust" aria-hidden="true"></span><strong>教育背景</strong></div>
+          <div><span class="planetIcon planetIconOcean" aria-hidden="true"></span><strong>个人爱好</strong></div>
+        </div>
+      </section>
+      <section class="planetPage pageHobby" id="planet-1" aria-label="个人爱好界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell hobbyShell">
+          <header class="pageHeader">
+            <span>01 / Ocean Planet</span>
+            <h1>个人爱好</h1>
+          </header>
+          <div class="hobbyMap">
+            <span>摄影</span>
+            <span>旅行</span>
+            <span>音乐</span>
+            <span>运动</span>
+            <span>阅读</span>
+          </div>
+          <p class="pageLead">兴趣内容先做成星图节点，后续可以替换成真实爱好和故事。</p>
+        </div>
+      </section>
+      <section class="planetPage pageEducation" id="planet-2" aria-label="教育背景界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell educationShell">
+          <header class="pageHeader">
+            <span>02 / Rust Planet</span>
+            <h1>教育背景</h1>
+          </header>
+          <div class="timeline educationTimeline" aria-label="教育经历时间轴">
+            <article class="educationStep">
+              <span>2022.09 - 2026.07</span>
+              <strong>昆明理工大学</strong>
+              <p>通信工程 221 班（卓越），2026 年 7 月 1 日毕业。大学阶段进入软件开发与人工智能应用方向，逐步形成全栈开发和 AI Agent 方向的技术兴趣。</p>
+            </article>
+            <article class="educationStep">
+              <span>2019.09 - 2022.06</span>
+              <strong>富源县胜境中学</strong>
+              <p>高中理（七）班，完成高中课程学习，为大学专业学习打下基础。</p>
+            </article>
+            <article class="educationStep">
+              <span>2018.09 - 2019.06</span>
+              <strong>富源县第三中学</strong>
+              <p>初三阶段，初中 343 班，在富源县第三中学完成中考前学习。</p>
+            </article>
+            <article class="educationStep">
+              <span>2016.09 - 2018.06</span>
+              <strong>富村镇第一中学</strong>
+              <p>初一至初二阶段，初中 343 班，在富村镇第一中学学习。</p>
+            </article>
+            <article class="educationStep">
+              <span>2012.09 - 2016.06</span>
+              <strong>托田小学</strong>
+              <p>小学三年级至六年级阶段。</p>
+            </article>
+            <article class="educationStep">
+              <span>2010.09 - 2012.06</span>
+              <strong>明德小学（昆明）</strong>
+              <p>小学一年级至二年级阶段。</p>
+            </article>
+          </div>
+          <div class="pageVisual educationVisual" aria-hidden="true"></div>
+        </div>
+      </section>
+      <section class="planetPage pageProjects" id="planet-3" aria-label="项目经历界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell projectShell">
+          <header class="pageHeader">
+            <span>03 / Giant Planet</span>
+            <h1>项目经历</h1>
+          </header>
+          <div class="projectList">
+            <article class="projectCard">
+              <div class="projectMedia">Logo</div>
+              <h2>项目名称</h2>
+              <p class="projectSummary">项目简介占位，简要说明项目背景、目标和核心功能。</p>
+              <div class="projectStack">
+                <span>技术栈</span>
+                <div>
+                  <em>Vue</em>
+                  <em>Node.js</em>
+                  <em>AI Agent</em>
+                </div>
+              </div>
+              <div class="projectRole">
+                <span>我的职责</span>
+                <p>负责核心模块开发、接口联调与功能优化。</p>
+              </div>
+              <div class="projectResult">
+                <span>项目成果</span>
+                <p>完成主要功能闭环，提升使用体验与系统稳定性。</p>
+              </div>
+              <div class="projectLinks">
+                <a href="#planet-4">Demo</a>
+                <a href="#planet-4">GitHub</a>
+              </div>
+            </article>
+            <article class="projectCard">
+              <div class="projectMedia">Logo</div>
+              <h2>项目名称</h2>
+              <p class="projectSummary">项目简介占位，后续可以替换成真实项目说明。</p>
+              <div class="projectStack">
+                <span>技术栈</span>
+                <div>
+                  <em>React</em>
+                  <em>Python</em>
+                  <em>API</em>
+                </div>
+              </div>
+              <div class="projectRole">
+                <span>我的职责</span>
+                <p>负责页面实现、数据处理与交互细节。</p>
+              </div>
+              <div class="projectResult">
+                <span>项目成果</span>
+                <p>完成可演示版本，并沉淀可复用开发经验。</p>
+              </div>
+              <div class="projectLinks">
+                <a href="#planet-4">Demo</a>
+                <a href="#planet-4">GitHub</a>
+              </div>
+            </article>
+            <article class="projectCard">
+              <div class="projectMedia">Logo</div>
+              <h2>项目名称</h2>
+              <p class="projectSummary">项目简介占位，可展示业务场景、技术亮点和用户价值。</p>
+              <div class="projectStack">
+                <span>技术栈</span>
+                <div>
+                  <em>JavaScript</em>
+                  <em>Database</em>
+                  <em>Deploy</em>
+                </div>
+              </div>
+              <div class="projectRole">
+                <span>我的职责</span>
+                <p>负责功能设计、问题排查与上线部署。</p>
+              </div>
+              <div class="projectResult">
+                <span>项目成果</span>
+                <p>形成完整项目流程，具备继续扩展空间。</p>
+              </div>
+              <div class="projectLinks">
+                <a href="#planet-4">Demo</a>
+                <a href="#planet-4">GitHub</a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-
-      <section id="intro" class="introSection">
-        <div class="sectionShell introShell">
-          <div class="sectionLabel">
-            <span>01</span>
-            <strong>个人简介</strong>
+      <section class="planetPage pageWork" id="planet-4" aria-label="工作经历界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell workShell">
+          <header class="pageHeader">
+            <span>04 / Ring Planet</span>
+            <h1>工作经历</h1>
+          </header>
+          <div class="workTimeline" aria-label="工作经历时间轴">
+            <article>
+              <span>当前方向</span>
+              <strong>AI Agent 开发</strong>
+              <p>主要从事 AI Agent 相关开发工作，关注智能体架构、工具调用、任务协作与大模型应用落地。</p>
+            </article>
+            <article>
+              <span>软件开发</span>
+              <strong>全栈技术实践</strong>
+              <p>围绕前端交互、后端接口、数据处理和系统部署进行开发实践，持续完善工程能力。</p>
+            </article>
           </div>
-          <button
-            class="portraitFrame uploadZone"
-            id="slot-portrait"
-            type="button"
-            data-slot="portrait"
-            aria-label="个人肖像"
-            disabled
-          >
-            <img
-              id="image-portrait"
-              src="/assets/portrait-placeholder.png"
-              alt="个人肖像"
-            />
-            <span class="uploadOverlay hidden" data-overlay>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <span data-overlay-text>上传图片</span>
-            </span>
-          </button>
-          <div class="introCopy">
-            <h2>关于我</h2>
-            <p>
-              这里预留个人简介内容，可以写你的背景、能力方向、兴趣、正在做的事情，以及想让访问者第一眼记住的信息。
-            </p>
-            <div class="placeholderList" aria-label="内容预留">
-              <span>经历预留</span>
-              <span>技能预留</span>
-              <span>关键词预留</span>
+          <p class="pageLead">工作经历先保留为方向性概览，后续可以补充公司、时间、岗位和具体成果。</p>
+        </div>
+      </section>
+      <section class="planetPage pageSkills" id="planet-5" aria-label="掌握技能界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell skillShell">
+          <header class="pageHeader">
+            <span>05 / Ice Planet</span>
+            <h1>掌握技能</h1>
+          </header>
+          <div class="skillGrid">
+            <article class="skillCard">
+              <div class="skillIcon" aria-hidden="true">UI</div>
+              <h2>前端开发</h2>
+              <p>构建响应式界面与交互体验，关注页面性能、组件化和视觉还原。</p>
+              <div class="techList">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Vue / React</span>
+              </div>
+              <div class="skillLevel" aria-label="熟练程度">
+                <strong>熟练程度</strong>
+                <div style="--level: 86%"></div>
+              </div>
+            </article>
+            <article class="skillCard">
+              <div class="skillIcon" aria-hidden="true">API</div>
+              <h2>后端服务</h2>
+              <p>设计接口、业务逻辑与数据服务，支撑稳定的软件系统运行。</p>
+              <div class="techList">
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>REST API</span>
+                <span>Database</span>
+              </div>
+              <div class="skillLevel" aria-label="熟练程度">
+                <strong>熟练程度</strong>
+                <div style="--level: 80%"></div>
+              </div>
+            </article>
+            <article class="skillCard">
+              <div class="skillIcon" aria-hidden="true">AI</div>
+              <h2>AI Agent</h2>
+              <p>探索智能体架构、任务协作、工具调用与大模型应用落地。</p>
+              <div class="techList">
+                <span>LLM</span>
+                <span>Agent</span>
+                <span>Prompt</span>
+                <span>Tool Use</span>
+              </div>
+              <div class="skillLevel" aria-label="熟练程度">
+                <strong>熟练程度</strong>
+                <div style="--level: 84%"></div>
+              </div>
+            </article>
+            <article class="skillCard">
+              <div class="skillIcon" aria-hidden="true">OPS</div>
+              <h2>工程工具</h2>
+              <p>使用开发工具链提升协作效率，完成部署、调试和版本管理。</p>
+              <div class="techList">
+                <span>Git</span>
+                <span>Vercel</span>
+                <span>Linux</span>
+                <span>Debug</span>
+              </div>
+              <div class="skillLevel" aria-label="熟练程度">
+                <strong>熟练程度</strong>
+                <div style="--level: 76%"></div>
+              </div>
+            </article>
+          </div>
+          <p class="pageLead">技能先用模块化占位，后续可加入熟练度、技术栈和证书。</p>
+        </div>
+      </section>
+      <section class="planetPage pageIntro" id="planet-6" aria-label="个人介绍界面">
+        <a class="pageBack" href="#top">返回星系</a>
+        <div class="pageShell introShell">
+          <header class="pageHeader">
+            <span>06 / Violet Planet</span>
+            <h1>个人介绍</h1>
+          </header>
+          <section class="introIdentity" aria-label="身份信息">
+            <div class="avatarPlaceholder">
+              <img src="/assets/avatar.jpg" alt="张响头像" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="work" class="workSection">
-        <div class="sectionShell">
-          <div class="sectionLabel">
-            <span>02</span>
-            <strong>作品展示</strong>
-          </div>
-          <div class="workGrid">
-            <article class="workCard">
-              <button
-                class="workImage uploadZone"
-                id="slot-work-one"
-                type="button"
-                data-slot="work-one"
-                aria-label="作品一"
-                disabled
-              >
-                <img id="image-work-one" src="/assets/work-one.png" alt="作品一" />
-                <span class="workNumber">01</span>
-                <span class="uploadOverlay hidden" data-overlay>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span data-overlay-text>上传图片</span>
-                </span>
-              </button>
-              <div class="workMeta">
-                <span>作品预留 01</span>
-                <p>这里预留项目名称、成果说明或展示说明。</p>
-              </div>
-            </article>
-
-            <article class="workCard">
-              <button
-                class="workImage uploadZone"
-                id="slot-work-two"
-                type="button"
-                data-slot="work-two"
-                aria-label="作品二"
-                disabled
-              >
-                <img id="image-work-two" src="/assets/work-two.png" alt="作品二" />
-                <span class="workNumber">02</span>
-                <span class="uploadOverlay hidden" data-overlay>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span data-overlay-text>上传图片</span>
-                </span>
-              </button>
-              <div class="workMeta">
-                <span>作品预留 02</span>
-                <p>这里预留项目名称、成果说明或展示说明。</p>
-              </div>
-            </article>
-
-            <article class="workCard">
-              <button
-                class="workImage uploadZone"
-                id="slot-work-three"
-                type="button"
-                data-slot="work-three"
-                aria-label="作品三"
-                disabled
-              >
-                <img
-                  id="image-work-three"
-                  src="/assets/work-three.png"
-                  alt="作品三"
-                />
-                <span class="workNumber">03</span>
-                <span class="uploadOverlay hidden" data-overlay>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span data-overlay-text>上传图片</span>
-                </span>
-              </button>
-              <div class="workMeta">
-                <span>作品预留 03</span>
-                <p>这里预留项目名称、成果说明或展示说明。</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="contactSection">
-        <div class="sectionShell contactShell">
-          <div class="sectionLabel">
-            <span>03</span>
-            <strong>联系方式</strong>
-          </div>
-          <button
-            class="markFrame uploadZone"
-            id="slot-mark"
-            type="button"
-            data-slot="mark"
-            aria-label="个人标识"
-            disabled
-          >
-            <img id="image-mark" src="/assets/mark-placeholder.png" alt="个人标识" />
-            <svg class="markIcon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M5 12.5 10.5 7l1.4 1.4-4.1 4.1H19v2H7.8l4.1 4.1-1.4 1.4L5 12.5Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span class="uploadOverlay hidden" data-overlay>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 4 8 8h3v6h2V8h3l-4-4Zm-7 11h2v3h12v-3h2v5H5v-5Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <span data-overlay-text>上传图片</span>
-            </span>
-          </button>
-          <div class="contactCopy">
-            <h2>联系我</h2>
-            <p>
-              这里预留邮箱、微信、社交媒体或合作说明。等内容确定后，可以把这一段替换成正式信息。
-            </p>
-            <div class="placeholderList" aria-label="联系方式预留">
-              <span>邮箱预留</span>
-              <span>微信预留</span>
-              <span>社交账号预留</span>
+            <div class="introNameBlock">
+              <h2>张响</h2>
+              <p>开发者</p>
+              <strong>全栈开发者，专注于 AI Agent 方向</strong>
             </div>
+          </section>
+          <section class="introContent" aria-label="个人介绍内容">
+            <article>
+              <span>个人简介</span>
+              <p>
+                毕业后进入软件开发领域，专注于全栈技术实践与人工智能应用探索。目前主要从事 AI Agent 的开发工作，致力于构建智能化的软件系统，探索大模型与智能体技术在实际场景中的应用。
+              </p>
+            </article>
+            <article>
+              <span>发展方向</span>
+              <p>
+                持续深入 AI Agent 技术领域，研究智能体架构、任务协作与能力提升方向，不断优化智能体的执行效率与智能水平。
+              </p>
+            </article>
+          </section>
+          <section class="introContact" aria-label="联系方式">
+            <article>
+              <span>电话</span>
+              <strong>18587339585</strong>
+            </article>
+            <article>
+              <span>邮箱</span>
+              <strong>1403608175@qq.com</strong>
+            </article>
+            <article>
+              <span>微信</span>
+              <strong>XiangZhang343</strong>
+            </article>
+          </section>
+          <div class="introStats" aria-label="关键词">
+            <span>全栈开发</span>
+            <span>AI Agent</span>
+            <span>大模型应用</span>
+            <span>智能系统</span>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="siteFooter">
-      <span>张响的个人介绍网站</span>
-      <span>登录后可上传图片</span>
-    </footer>
-
-    <input id="fileInput" class="hiddenInput" type="file" accept="image/*" />
-
-    <div class="modalBackdrop hidden" id="loginModal" aria-hidden="true">
-      <form class="loginPanel" id="loginForm">
-        <button class="closeButton" type="button" id="closeLogin" aria-label="关闭">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6 6.4 5Z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-        <div class="loginIcon" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <path
-              d="M12 2a7 7 0 0 0-7 7v3H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2V9a7 7 0 0 0-7-7Zm-5 10V9a5 5 0 0 1 10 0v3H7Z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-        <h2>管理员登录</h2>
-        <label>
-          <span>账号</span>
-          <input
-            id="emailInput"
-            name="email"
-            type="email"
-            placeholder="1403608175@qq.com"
-            autocomplete="username"
-            required
-          />
-        </label>
-        <label>
-          <span>密码</span>
-          <input
-            id="passwordInput"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            required
-          />
-        </label>
-        <p class="formError hidden" id="loginError">账号或密码不正确</p>
-        <button class="primaryButton" type="submit" id="loginSubmit">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M13 3a3 3 0 0 1 3 3v2h-2V6a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-2h2v2a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M16 8.5 20.5 13 16 17.5 14.6 16.1 16.7 14H9v-2h7.7l-2.1-2.1L16 8.5Z"
-              fill="currentColor"
-            />
-          </svg>
-          <span id="loginButtonLabel">进入</span>
-        </button>
-      </form>
-    </div>
-
-    <div class="toast hidden" id="toast"></div>
     <script type="module" src="/app.js"></script>
   </body>
 </html>
