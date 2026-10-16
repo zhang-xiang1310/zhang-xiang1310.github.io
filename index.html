@@ -13,24 +13,88 @@
     <main id="top">
       <section class="heroSection" aria-label="动态星系首页">
         <canvas id="galaxyHero" class="galaxyHeroCanvas" aria-hidden="true"></canvas>
-        <div class="heroTitle" aria-label="个人介绍 张响">
-          <h1>个人介绍</h1>
-          <p>张响</p>
+        <div class="heroDepthLayer" aria-hidden="true"></div>
+        <div class="heroScanline" aria-hidden="true"></div>
+        <div class="heroTitle" aria-label="张响星系档案">
+          <span class="heroEyebrow">Explorer Profile</span>
+          <h1>ZHANG XIANG</h1>
+          <p>星系个人档案</p>
+          <dl class="heroMeta">
+            <div>
+              <dt>档案编号</dt>
+              <dd>AX-2026-001</dd>
+            </div>
+            <div>
+              <dt>所属星系</dt>
+              <dd>艾瑞迪亚星系</dd>
+            </div>
+            <div>
+              <dt>探索等级</dt>
+              <dd>Lv.7</dd>
+            </div>
+          </dl>
         </div>
-        <div class="planetLegend" aria-label="行星说明">
-          <div><span class="planetIcon planetIconViolet" aria-hidden="true"></span><strong>个人介绍</strong></div>
-          <div><span class="planetIcon planetIconIce" aria-hidden="true"></span><strong>掌握技能</strong></div>
-          <div><span class="planetIcon planetIconRing" aria-hidden="true"></span><strong>工作经历</strong></div>
-          <div><span class="planetIcon planetIconGiant" aria-hidden="true"></span><strong>项目经历</strong></div>
-          <div><span class="planetIcon planetIconRust" aria-hidden="true"></span><strong>教育背景</strong></div>
-          <div><span class="planetIcon planetIconOcean" aria-hidden="true"></span><strong>个人爱好</strong></div>
-        </div>
+        <nav class="systemPanel" aria-label="星系导航">
+          <span class="panelKicker">System Database</span>
+          <a href="#planet-1" data-planet-jump="planet-1">
+            <span class="planetIcon planetIconLava" aria-hidden="true"></span>
+            <strong>个人爱好</strong>
+            <small>Personal Interests</small>
+          </a>
+          <a href="#planet-2" data-planet-jump="planet-2">
+            <span class="planetIcon planetIconOcean" aria-hidden="true"></span>
+            <strong>教育背景</strong>
+            <small>Education Background</small>
+          </a>
+          <a href="#planet-3" data-planet-jump="planet-3">
+            <span class="planetIcon planetIconPurpleIce" aria-hidden="true"></span>
+            <strong>项目经历</strong>
+            <small>Project Experience</small>
+          </a>
+          <a href="#planet-4" data-planet-jump="planet-4">
+            <span class="planetIcon planetIconGiant" aria-hidden="true"></span>
+            <strong>工作经历</strong>
+            <small>Work Experience</small>
+          </a>
+          <a href="#planet-5" data-planet-jump="planet-5">
+            <span class="planetIcon planetIconSilverRing" aria-hidden="true"></span>
+            <strong>掌握技能</strong>
+            <small>Skills Matrix</small>
+          </a>
+          <a href="#planet-6" data-planet-jump="planet-6">
+            <span class="planetIcon planetIconAurora" aria-hidden="true"></span>
+            <strong>个人介绍</strong>
+            <small>About Me</small>
+          </a>
+        </nav>
+        <aside class="statusPanel" aria-label="星系状态">
+          <span class="panelKicker">System Status</span>
+          <dl>
+            <div>
+              <dt>恒星类型</dt>
+              <dd>G 型主序星</dd>
+            </div>
+            <div>
+              <dt>行星数量</dt>
+              <dd>6 颗</dd>
+            </div>
+            <div>
+              <dt>星系完整度</dt>
+              <dd>92%</dd>
+            </div>
+            <div>
+              <dt>探索进度</dt>
+              <dd><span style="--value: 87%"></span></dd>
+            </div>
+          </dl>
+        </aside>
+        <p class="missionTagline">探索未知 · 记录成长 · 超越自我</p>
       </section>
       <section class="planetPage pageHobby" id="planet-1" aria-label="个人爱好界面">
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell hobbyShell">
           <header class="pageHeader">
-            <span>01 / Ocean Planet</span>
+            <span>01 / Lava Planet</span>
             <h1>个人爱好</h1>
           </header>
           <div class="hobbyMap">
@@ -47,7 +111,7 @@
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell educationShell">
           <header class="pageHeader">
-            <span>02 / Rust Planet</span>
+            <span>02 / Ocean Planet</span>
             <h1>教育背景</h1>
           </header>
           <div class="timeline educationTimeline" aria-label="教育经历时间轴">
@@ -89,7 +153,7 @@
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell projectShell">
           <header class="pageHeader">
-            <span>03 / Giant Planet</span>
+            <span>03 / Purple Ice Planet</span>
             <h1>项目经历</h1>
           </header>
           <div class="projectList">
@@ -175,7 +239,7 @@
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell workShell">
           <header class="pageHeader">
-            <span>04 / Ring Planet</span>
+            <span>04 / Gas Giant</span>
             <h1>工作经历</h1>
           </header>
           <div class="workTimeline" aria-label="工作经历时间轴">
@@ -197,7 +261,7 @@
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell skillShell">
           <header class="pageHeader">
-            <span>05 / Ice Planet</span>
+            <span>05 / Silver Ring Planet</span>
             <h1>掌握技能</h1>
           </header>
           <div class="skillGrid">
@@ -269,7 +333,7 @@
         <a class="pageBack" href="#top">返回星系</a>
         <div class="pageShell introShell">
           <header class="pageHeader">
-            <span>06 / Violet Planet</span>
+            <span>06 / Aurora Planet</span>
             <h1>个人介绍</h1>
           </header>
           <section class="introIdentity" aria-label="身份信息">
